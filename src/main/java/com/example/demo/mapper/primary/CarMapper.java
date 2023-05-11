@@ -17,7 +17,7 @@ import java.util.Collection;
 @Mapper
 public interface CarMapper {
 
-    @Insert("insert into car(make,model,year) values(#{make},#{model},#{year})")
+    @Insert("insert into CAR(make,model,year) values(#{make},#{model},#{year})")
     void insert(Car car);
 
     @Select("select * from CAR")

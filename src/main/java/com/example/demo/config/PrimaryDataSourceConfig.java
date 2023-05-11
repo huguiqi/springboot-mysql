@@ -28,11 +28,11 @@ public class PrimaryDataSourceConfig {
     public DataSource primaryDataSource(){
         System.out.println("-------primary dataSource-------init");
         AtomikosDataSourceBean dataSourceBean = new AtomikosDataSourceBean();
-        dataSourceBean.setXaDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlXADataSource");
+        dataSourceBean.setXaDataSourceClassName("com.mysql.cj.jdbc.MysqlXADataSource");
         Properties pts = new Properties();
-        pts.setProperty("url","jdbc:mysql://localhost:3306/studentdb?useUnicode=true&characterEncoding=utf-8");
+        pts.setProperty("url","jdbc:mysql://192.168.0.88:3306/test?useUnicode=true&characterEncoding=utf-8");
         pts.setProperty("user","root");
-        pts.setProperty("password","huguiqi");
+        pts.setProperty("password","root");
         dataSourceBean.setXaProperties(pts);
         dataSourceBean.setPoolSize(1);
         dataSourceBean.setMaxPoolSize(3);

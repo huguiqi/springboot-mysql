@@ -3,7 +3,7 @@
 <mapper namespace="com.example.demo.mapper.primary.CarMapper">
 
     <select id="search" resultType="com.example.demo.bean.Car">
-        SELECT * FROM car
+        SELECT * FROM CAR
         <where>
             <if test="make != null">
                 make = #{make}
